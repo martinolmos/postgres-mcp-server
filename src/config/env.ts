@@ -23,6 +23,7 @@ const postgres = process.env["POSTGRES_URL"]
       host: getEnvVar("POSTGRES_HOST"),
       port: parseInt(process.env.POSTGRES_PORT || "5432", 10),
       database: getEnvVar("POSTGRES_DATABASE"),
+      sslMode: process.env.POSTGRES_SSL_MODE || "require",
     };
 
 export const config = {
