@@ -28,6 +28,9 @@ export POSTGRES_HOST=localhost
 export POSTGRES_PORT=5432 # this is the default
 export POSTGRES_DATABASE=your_database
 
+# PostgreSQL SSL Mode (default: require)
+export POSTGRES_SSL_MODE=require # options: disable, prefer, allow, require, verify-ca, verify-full
+
 # HTTP Server Configuration
 # Following are the default values
 export PORT=3000
@@ -52,6 +55,9 @@ POSTGRES_USERNAME=your_username
 POSTGRES_PASSWORD=your_password
 POSTGRES_HOST=localhost
 POSTGRES_DATABASE=your_database
+
+# PostgreSQL SSL Mode (default: require)
+POSTGRES_SSL_MODE=require
 
 # HTTP Server Configuration
 PORT=3000
@@ -181,6 +187,7 @@ You have to specify these inside the .env file.
 | `POSTGRES_PASSWORD` | PostgreSQL password | - | Yes |
 | `POSTGRES_HOST` | PostgreSQL host | - | Yes |
 | `POSTGRES_DATABASE` | PostgreSQL database name | - | Yes |
+| `POSTGRES_SSL_MODE` | PostgreSQL SSL mode (disable, prefer, allow, require, verify-ca, verify-full) | require | No |
 | `PORT` | HTTP server port | 3000 | No |
 | `HOST` | HTTP server host | 0.0.0.0 | No |
 | `CORS_ORIGIN` | Allowed CORS origins (comma-separated) | localhost:8080,localhost:3000 | No |
